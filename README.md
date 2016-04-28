@@ -13,7 +13,7 @@ Pin assignment:
 * Pin 6, 9, 10, 11 = PWM output for fan control
 * Pin 4, 7, 8, 12, 13 = RPM fan inputs
 
-- [x] debounced mode switch on Pin 2 with 5 different modes; could be connected to the Reset button of the case?!
+- [x] debounced mode switch on Pin 2 with 5 different modes, to be connected to the Reset button of the case
 - [x] auto PWM setting for up 5 Fans
 - [x] Fan RPM pulling algorithm for 5 Fans = inaccurate (divide by 20 - but that's rough estimation then)
 - [ ] write RPM algorithm using interrupts (http://playground.arduino.cc/Main/PinChangeInt)
