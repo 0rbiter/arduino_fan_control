@@ -69,7 +69,7 @@ void getRpmStates() {
 void detectRpm() {
   int i;
   for(i = 0; i < 5; i++)
-    if(RPM[i].lastState != RPM[i].newState && RPM[i].newState == 0)
+    if(RPM[i].lastState == 1 && RPM[i].newState == 0)
       RPM[i].flanks++;
   for(i = 0; i < 5; i++) {
     if(RPM[i].flanks >= 2) {
@@ -87,7 +87,7 @@ void printRpm(long ms_delay) {
       Serial.print("FAN ");
       Serial.print(i+1);
       Serial.print(": ");
-      Serial.print(60000/(millis() - lastTime) * RPM[i].rpmCounter / 10);
+      Serial.print((RPM[i].rpmCounter / ((millis() - lastTime)/1000)) * 60 );
       Serial.println(" rpm");
       RPM[i].rpmCounter = 0;
     }
@@ -115,7 +115,7 @@ void setup() {
 void loop() {
   getRpmStates();
   detectRpm();
-  printRpm(1000);
+  printRpm(3000);
   getModeState();
   detectModeSwitch();
   setPwm();
