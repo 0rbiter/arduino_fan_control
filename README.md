@@ -9,8 +9,8 @@ Hopefully!
 
 Pin assignment:
 
--Pin 2 = Mode switch
--Pin 6, 9, 10, 11 = PWM output for fan control
--Pin 4, 7, 8, 12, 13 = RPM fan inputs
+* Pin 2 = Mode switch
+* Pin 6, 9, 10, 11 = PWM output for fan control
+* Pin 4, 7, 8, 12, 13 = RPM fan inputs
 
 Tested with Noctua NF-P12PWM Fan
